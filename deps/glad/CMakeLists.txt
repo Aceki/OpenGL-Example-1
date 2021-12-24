@@ -1,0 +1,8 @@
+add_library(glad)
+
+target_sources(glad
+    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/glad.c
+)
+
+set_property(TARGET glad PROPERTY INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set_property(TARGET glad PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/include)
